@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: fixed; /* Keeps the header fixed at the top */
+    top: 0; /* Ensures it stays at the top */
+    width: 100%; /* Makes it stretch across the page */
+    background-color: #000000ad; /* Match your design */
+    padding: 10px 20px;
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+header nav {
+    min-width: 700px;
+    max-width: 100%;
+    height: 40px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+nav ul {
+    text-align: center;
+    margin: auto;
+}
+
+header li {
+    display: inline;
+    padding: 40px 20px;
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0 auto;
+}
+
+nav li:hover {
+    color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: inherit;
+    color: rgba(255, 255, 255, 0.37);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grad1 {
+    background: linear-gradient(to right, rgb(80, 61, 155), rgb(255, 217, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;      
+}
+
+.grad2 {
+    background: linear-gradient(to right, rgb(80, 61, 155), rgb(255, 217, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;      
+}
+
+.grad3 {
+    background: linear-gradient(to right, rgb(80, 61, 155), rgb(255, 217, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;      
+}
+
+.grad4 {
+    background: linear-gradient(to right, rgb(80, 61, 155), rgb(255, 217, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    font-family: 'Montserrat', sans-serif;   
+}
+
+.grad5 {
+    background: linear-gradient(to right, rgb(80, 61, 155), rgb(255, 217, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;      
+}
+
+.grad6 {
+    background: linear-gradient(to right, rgb(80, 61, 155), rgb(255, 217, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;      
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.grad7 {
+    background: linear-gradient(to right, rgb(80, 61, 155), rgb(255, 217, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;      
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.media {
+    padding-top: 200px;
+}
+
+.scrolling-container {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.scrolling-content {
+    display: flex;
+    gap: 10px; /* Adjust spacing */
+    animation: scrollLeft 10s linear infinite;
+    height: 300px;
+}
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-content img {
+    width: 450px; /* Adjust as needed */
+    border-radius: 10px;
+}
+
+.research {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(40, 30, 80) 70%);
+    padding-top: 100px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around; /* Even spacing */
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    max-width: 100%;
+
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px; /* Adjust size */
+}
+
+.feature-item img {
+    width: 60px; /* Adjust icon size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    width: 100%; /* Ensure it takes full width */
+    text-align: center;
+    padding-top: 50px;
+}
+
+.plans {
+    padding-top: 150px;
+}
+
+.plan {
+    color: gray;
+    transition: color 0.3s ease;
+}
+
+.plan.active {
+    color: white;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    border: 2px solid white;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: gray;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: black;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+input:checked ~ .plan:first-of-type {
+    color: gray;
+}
+
+input:checked ~ .plan:last-of-type {
+    color: white;
+}
+
+/* Change background to green when checked */
+#toggle-switch:checked + .slider {
+    background-color: green;
+}
+
+/* Move the circle to the right when checked */
+#toggle-switch:checked + .slider::before {
+    transform: translateX(24px);
+    background-color: white;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+}
+
+/* Pricing Container */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+/* Individual Card */
+.pricing-card {
+    background: black;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+    border: 3px solid transparent;
+    transition: 0.3s;
+}
+
+/* Gradient Borders */
+.border-gradient {
+    border-image: linear-gradient(to right, rgb(80, 61, 155), rgb(255, 217, 0)) 1;
+}
+
+/* Highlighted Card */
+.highlight {
+    border-width: 4px;
+    border-image: linear-gradient(to right, rgb(80, 61, 155), rgb(255, 217, 0)) 1;
+    box-shadow: 0px 0px 20px rgba(255, 200, 0, 0.5);
+}
+
+/* Best Choice Badge */
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-image: linear-gradient(to right, rgb(80, 61, 155), rgb(255, 217, 0)) 1;
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+/* Title */
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+}
+
+/* Price */
+.price {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Features List */
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/* Show More Features */
+.more-features {
+    color: yellow;
+    font-size: 12px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.more-features:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    background: linear-gradient(to right, yellow, orange);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Payment Icons */
+.payment-icons img {
+    width: 40px;
+    margin: 10px;
+}
+
+.banner p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: large;
+    padding: 15px;
+}
+
+.top {
+    background: linear-gradient(180deg, rgb(40, 30, 80) 0%, rgb(0, 0, 0) 70%);
+}
+
+.top-right {
+    padding-left: 75%;
+    margin-top: -40px; /* Adjust value as needed */
+}
+
+.top-right button {
+    color: white;
+    position: relative;
+    display: block;
+    background: rgba(0, 0, 0, 0);
+    border: 2px white solid;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: color 0.5s, border 0.5s, padding 0.5s, font-size 0.5s, margin 0.5s;
+}
+
+.top-right button:hover {
+    color: rgb(255, 255, 255);
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: #000;
+    font-size: 20px;
+    transition: color 0.5s, border 0.5s, padding 0.5s, font-size 0.5s, margin 0.5s;
+}
+
+.join {
+    padding-top: 10px;
+}
+
+.join button {
+    color: white;
+    position: relative;
+    background-color: rgb(40, 30, 80);
+    border: 2px rgb(255, 255, 255) solid;
+    font-size: 18px;
+    text-align: center;
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: padding 0.5s, font-size 0.5s, margin 0.5s;
+}
+
+.join button:hover {
+    font-size: 20px;
+    transition: color 0.5s, border 0.5s, padding 0.5s, font-size 0.5s, margin 0.5s;
+}
+
+/* Footer Styling */
+.footer {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    padding-top: 150px;
+}
+
+/* Disclaimer Text */
+.disclaimer {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Bold Text for Gambling Warning */
+.disclaimer strong {
+    color: #ffcc00;
+}
+
+/* Copyright */
+.copyright {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Footer Links */
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px;
+}
+
+.banner h1 {
+    font-size: 50px;
+}
+
+#main-pic {
+    height: 550px;
+    width: 1000px;
+}
