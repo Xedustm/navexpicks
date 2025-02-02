@@ -12,12 +12,16 @@
 }
 
 header {
-    position: fixed; /* Keeps the header fixed at the top */
-    top: 0; /* Ensures it stays at the top */
-    width: 100%; /* Makes it stretch across the page */
-    background-color: #000000ad; /* Match your design */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000ad;
     padding: 10px 20px;
-    z-index: 1000; /* Ensures it stays above other elements */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spreads out content evenly */
 }
 
 header nav {
@@ -29,8 +33,18 @@ header nav {
 
 nav ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap; /* Allows items to move to new line if needed */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to move to new line if needed */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 header li {
@@ -385,8 +399,9 @@ body {
 }
 
 .top-right {
-    padding-left: 75%;
-    margin-top: -40px; /* Adjust value as needed */
+    margin-left: auto; /* Pushes the button to the right */
+    display: flex;
+    align-items: center;
 }
 
 .top-right button {
@@ -491,11 +506,11 @@ body {
 }
 
 #main-pic {
-    width: 90%; /* Adjusts dynamically based on screen size */
-    max-width: 500px; /* Prevents it from being too large */
+    width: 90%;  /* Allows flexibility */
+    max-width: 100%; /* Prevents overflow */
     height: auto; /* Maintains aspect ratio */
     display: block;
-    margin: 0 auto; /* Centers the image */
+    margin: 20px auto; /* Centers the image */
 }
 
 @media (max-width: 768px) {
@@ -535,7 +550,25 @@ body {
 
 @media (max-width: 768px) {
     #main-pic {
-        width: 80%; /* Adjusts for mobile */
-        max-width: 300px; /* Ensures it stays within the viewport */
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .top-right {
+        margin-left: 0;
+        margin-top: 10px;
     }
 }
