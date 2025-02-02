@@ -491,9 +491,11 @@ body {
 }
 
 #main-pic {
-    width: 90%;
-    max-width: 500px; /* Prevents being too large */
-    height: auto;
+    width: 90%; /* Adjusts dynamically based on screen size */
+    max-width: 500px; /* Prevents it from being too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the image */
 }
 
 @media (max-width: 768px) {
@@ -528,5 +530,12 @@ body {
     .footer {
         padding-top: 50px;
         font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #main-pic {
+        width: 80%; /* Adjusts for mobile */
+        max-width: 300px; /* Ensures it stays within the viewport */
     }
 }
